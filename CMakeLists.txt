@@ -9,8 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(spotify-qt-rmlui
 	main.cpp
-	shell/sdl/RenderInterface.hpp
-	shell/sdl/SystemInterface.hpp)
+	impl/sdl/RenderInterface.hpp
+	impl/sdl/SystemInterface.hpp)
 
 # Currently, we rely on SDL
 # TODO: Use GLFW/sokol/... instead

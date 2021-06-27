@@ -6,8 +6,8 @@
 
 #include <iostream>
 
-#include "shell/sdl/RenderInterface.hpp"
-#include "shell/sdl/SystemInterface.hpp"
+#include "impl/sdl/RenderInterface.hpp"
+#include "impl/sdl/SystemInterface.hpp"
 
 void sdl_init(const Rml::Vector2i &window_size, SDL_Renderer **sdl_renderer,
 	SDL_Window **sdl_window, SDL_GLContext *sdl_gl_context)
