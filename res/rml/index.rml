@@ -1,0 +1,14 @@
+<rml>
+	<head>
+		<link type="text/rcss" href="/res/rcss/rml.rcss"/>
+		<link type="text/rcss" href="/res/rcss/window.rcss"/>
+	</head>
+	<body data-model="animals">
+	<div id="container">
+		<h1>RmlUi</h1>
+		<p>Hello <span id="world">world</span>!</p>
+		<p data-if="show_text">The quick brown fox jumps over the lazy {{animal}}.</p>
+		<input type="text" data-value="animal"/>
+	</div>
+	</body>
+</rml>
