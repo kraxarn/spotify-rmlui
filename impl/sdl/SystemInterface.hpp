@@ -4,6 +4,7 @@
 #include "RmlUi/Core/Input.h"
 
 #include <SDL.h>
+#include <SDL_keycode.h>
 
 // Based off
 // https://github.com/mikke89/RmlUi/blob/master/Samples/basic/sdl2/src/SystemInterfaceSDL2.h
