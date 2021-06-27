@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(spotify-qt-rmlui)
+project(spotify-rmlui)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -7,7 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(spotify-qt-rmlui
+add_executable(spotify-rmlui
 	main.cpp
 	impl/sdl/RenderInterface.hpp
 	impl/sdl/SystemInterface.hpp)
@@ -15,9 +15,9 @@ add_executable(spotify-qt-rmlui
 # Currently, we rely on SDL
 # TODO: Use GLFW/sokol/... instead
 include(thirdparty/SDL2.cmake)
-target_link_libraries(spotify-qt-rmlui PRIVATE SDL2 SDL2_image)
+target_link_libraries(spotify-rmlui PRIVATE SDL2 SDL2_image)
 
 # RmlUi
 include(thirdparty/RmlUi.cmake)
-target_link_libraries(spotify-qt-rmlui PRIVATE RmlCore RmlDebugger freetype GL GLEW)
-target_compile_definitions(spotify-qt-rmlui PRIVATE RMLUI_STATIC_LIB)
+target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype GL GLEW)
+target_compile_definitions(spotify-rmlui PRIVATE RMLUI_STATIC_LIB)
