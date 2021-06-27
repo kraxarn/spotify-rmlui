@@ -1,0 +1,3 @@
+[submodule "thirdparty/RmlUi"]
+	path = thirdparty/RmlUi
+	url = https://github.com/mikke89/RmlUi.git
