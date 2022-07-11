@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.20)
-project(spotify-rmlui)
+cmake_minimum_required(VERSION 3.5)
+project(spotify-rmlui LANGUAGES CXX VERSION 0.1)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -7,17 +7,24 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(spotify-rmlui
-	main.cpp
-	impl/sdl/RenderInterface.hpp
-	impl/sdl/SystemInterface.hpp)
+# Add source files
+add_executable(spotify-rmlui)
+add_subdirectory(src)
 
-# Currently, we rely on SDL
-# TODO: Use GLFW/sokol/... instead
-include(thirdparty/SDL2.cmake)
-target_link_libraries(spotify-rmlui PRIVATE SDL2 SDL2_image)
+# GLFW
+# TODO: Currently needs to be installed in system
+find_package(glfw3 REQUIRED)
+
+# RmlUi backend (GLFW/OpenGL3)
+target_include_directories(${PROJECT_NAME} PRIVATE
+	thirdparty/RmlUi/Backends)
+
+target_sources(${PROJECT_NAME} PRIVATE
+	thirdparty/RmlUi/Backends/RmlUi_Backend_GLFW_GL3.cpp
+	thirdparty/RmlUi/Backends/RmlUi_Platform_GLFW.cpp
+	thirdparty/RmlUi/Backends/RmlUi_Renderer_GL3.cpp)
 
 # RmlUi
 include(thirdparty/RmlUi.cmake)
-target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype GL GLEW)
+target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype glfw)
 target_compile_definitions(spotify-rmlui PRIVATE RMLUI_STATIC_LIB)
