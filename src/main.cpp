@@ -32,20 +32,6 @@ auto main(int /*argc*/, char **/*argv*/) -> int
 	Rml::LoadFontFace("res/font/NotoSans-Regular.ttf", false);
 	Rml::LoadFontFace("res/font/NotoEmoji-Regular.ttf", true);
 
-	// Data bindings
-	struct ApplicationData
-	{
-		bool show_text = true;
-		Rml::String animal = "dog";
-	} my_data;
-
-	auto data_model = context->CreateDataModel("animals");
-	if (data_model)
-	{
-		data_model.Bind("show_text", &my_data.show_text);
-		data_model.Bind("animal", &my_data.animal);
-	}
-
 #ifndef NDEBUG
 	Rml::Debugger::Initialise(context);
 #endif
@@ -53,11 +39,6 @@ auto main(int /*argc*/, char **/*argv*/) -> int
 	// Load document
 	auto *document = context->LoadDocument("res/rml/index.rml");
 	document->Show();
-
-	// Test replacing some text
-	auto *element = document->GetElementById("world");
-	element->SetInnerRML(reinterpret_cast<const char *>(u8"🌍"));
-	element->SetProperty("font-size", "1.5em");
 
 	// Application loop
 	while (Backend::ProcessEvents(context))
