@@ -6,12 +6,12 @@
 	<body>
 	<div id="container">
 		<div id="toolbar">
-			<svg id="main-menu" src="../icons/application-menu.svg"/>
-			<svg id="search" src="../icons/edit-find.svg"/>
+			<svg id="main-menu" src="/res/icons/application-menu.svg"/>
+			<svg id="search" src="/res/icons/edit-find.svg"/>
 
-			<svg id="previous" src="../icons/media-skip-backward.svg"/>
-			<svg id="play-pause" src="../icons/media-playback-start.svg"/>
-			<svg id="next" src="../icons/media-skip-forward.svg"/>
+			<svg id="previous" src="/res/icons/media-skip-backward.svg"/>
+			<svg id="play-pause" src="/res/icons/media-playback-start.svg"/>
+			<svg id="next" src="/res/icons/media-skip-forward.svg"/>
 
 			<input id="progress" type="range" min="0" max="100" value="50"/>
 		</div>
