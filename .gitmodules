@@ -1,3 +1,9 @@
 [submodule "thirdparty/RmlUi"]
 	path = thirdparty/RmlUi
 	url = https://github.com/mikke89/RmlUi.git
+[submodule "thirdparty/spotify-qt"]
+	path = thirdparty/spotify-qt
+	url = https://github.com/kraxarn/spotify-qt.git
+[submodule "thirdparty/lunasvg"]
+	path = thirdparty/lunasvg
+	url = https://github.com/sammycage/lunasvg.git
