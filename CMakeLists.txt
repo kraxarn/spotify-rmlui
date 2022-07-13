@@ -15,6 +15,9 @@ add_subdirectory(src)
 # TODO: Currently needs to be installed in system
 find_package(glfw3 REQUIRED)
 
+# LunaSVG
+add_subdirectory(thirdparty/lunasvg)
+
 # RmlUi backend (GLFW/OpenGL3)
 target_include_directories(${PROJECT_NAME} PRIVATE
 	thirdparty/RmlUi/Backends)
@@ -26,5 +29,5 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 # RmlUi
 include(thirdparty/RmlUi.cmake)
-target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype glfw)
+target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype glfw lunasvg)
 target_compile_definitions(spotify-rmlui PRIVATE RMLUI_STATIC_LIB)
