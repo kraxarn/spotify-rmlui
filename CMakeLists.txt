@@ -29,5 +29,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 
 # RmlUi
 include(thirdparty/RmlUi.cmake)
-target_link_libraries(spotify-rmlui PRIVATE RmlCore RmlDebugger freetype glfw lunasvg)
+target_link_libraries(spotify-rmlui PRIVATE
+	RmlCore RmlDebugger freetype lunasvg
+	glfw ${CMAKE_DL_LIBS})
 target_compile_definitions(spotify-rmlui PRIVATE RMLUI_STATIC_LIB)
