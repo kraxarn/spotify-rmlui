@@ -15,7 +15,7 @@ jobs:
         submodules: true
 
     - name: Install Dependencies
-      run: sudo apt update && sudo apt install build-essential libsdl2-dev libsdl2-image-dev libglew-dev -y
+      run: sudo apt update && sudo apt install libglfw3-dev -y
 
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/build
