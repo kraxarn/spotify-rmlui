@@ -3,12 +3,18 @@
 		<link type="text/rcss" href="/res/rcss/rml.rcss"/>
 		<link type="text/rcss" href="/res/rcss/window.rcss"/>
 	</head>
-	<body data-model="animals">
+	<body>
 	<div id="container">
-		<h1>RmlUi</h1>
-		<p>Hello <span id="world">world</span>!</p>
-		<p data-if="show_text">The quick brown fox jumps over the lazy {{animal}}.</p>
-		<input type="text" data-value="animal"/>
+		<div id="toolbar">
+			<svg id="main-menu" src="../icons/application-menu.svg"/>
+			<svg id="search" src="../icons/edit-find.svg"/>
+
+			<svg id="previous" src="../icons/media-skip-backward.svg"/>
+			<svg id="play-pause" src="../icons/media-playback-start.svg"/>
+			<svg id="next" src="../icons/media-skip-forward.svg"/>
+
+			<input id="progress" type="range" min="0" max="100" value="50"/>
+		</div>
 	</div>
 	</body>
 </rml>
