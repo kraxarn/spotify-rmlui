@@ -19,9 +19,6 @@ h1 {
 p {
   margin: 0.7em 0; }
 
-a.icon {
-  font-family: "icons"; }
-
 input.text {
   background-color: #3e3e3e;
   color: #ffffff;
