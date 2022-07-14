@@ -30,6 +30,7 @@ auto main(int /*argc*/, char **/*argv*/) -> int
 
 	// Fonts
 	Rml::LoadFontFace("res/font/NotoSans-Regular.ttf", false);
+	Rml::LoadFontFace("res/font/NotoSansMono-Regular.ttf", false);
 	Rml::LoadFontFace("res/font/NotoEmoji-Regular.ttf", true);
 
 #ifndef NDEBUG
