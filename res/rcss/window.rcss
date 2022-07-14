@@ -47,6 +47,10 @@ input.text {
     border-radius: 6px; }
     #toolbar svg:hover {
       background-color: #3e3e3e; }
+    #toolbar svg.enabled {
+      border-bottom: 1px #1db954;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
   #toolbar #search {
     margin: 0 4px; }
   #toolbar #play-pause {
