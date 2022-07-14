@@ -129,10 +129,6 @@ input.text {
 		slidertrack {
 			background-color: $slider-background-color;
 			border-radius: 4px;
-
-			&:active {
-				background-color: $theme-color;
-			}
 		}
 
 		sliderbar {

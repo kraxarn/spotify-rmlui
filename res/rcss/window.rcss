@@ -59,8 +59,6 @@ input.text {
     #toolbar #progress slidertrack {
       background-color: #535353;
       border-radius: 4px; }
-      #toolbar #progress slidertrack:active {
-        background-color: #1db954; }
     #toolbar #progress sliderbar {
       width: 16px;
       height: 16px;
