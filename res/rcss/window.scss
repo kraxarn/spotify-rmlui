@@ -7,6 +7,8 @@ $header-background-color: #181818;
 // Background color for buttons or other selectable items
 $button-background-color: #333333;
 
+$toolbar-spacer-width: 4px;
+
 // Background for handle in scrollbars
 $scrollbar-handle-color: #4d4d4d;
 
@@ -19,6 +21,8 @@ $sidebar-foreground-color: #b3b3b3;
 $menu-background-color: $secondary-background-color;
 // Menu hover
 $menu-hover-background-color: #3e3e3e;
+
+$menu-border-radius: 6px;
 
 // Input background color for text inputs etc.
 $input-background-color: #3e3e3e;
@@ -92,22 +96,102 @@ input.text {
 	background-color: $secondary-background-color;
 	width: 100%;
 	height: 42px;
-	padding: 0 12px;
+	padding: 0 6px;
+	box-sizing: border-box;
 
 	svg {
-		width: 24px;
-		height: 24px;
+		width: 22px;
+		height: 22px;
+		padding: 4px;
+		border-radius: 6px;
+
+		&:hover {
+			background-color: $menu-hover-background-color;
+		}
 	}
 
 	#search {
-		margin: 0 12px;
+		margin: 0 $toolbar-spacer-width;
 	}
 
 	#play-pause {
-		margin: 0 8px;
+		margin: 0 2px;
+	}
+
+	.spacer {
+		flex: 1;
 	}
 
 	#progress {
-		width: 300px;
+		flex: 2;
+		height: 5px;
+
+		slidertrack {
+			background-color: $slider-background-color;
+			border-radius: 4px;
+
+			&:active {
+				background-color: $theme-color;
+			}
+		}
+
+		sliderbar {
+			width: 16px;
+			height: 16px;
+			margin-top: -6px;
+			border-radius: 8px;
+			background-color: $slider-handle-color;
+		}
+	}
+
+	#position {
+		font-family: "Noto Sans Mono";
+		margin-left: 12px;
+	}
+
+	#minimize {
+		margin-left: $toolbar-spacer-width;
+	}
+}
+
+#main-menu-dropdown {
+	background-color: $secondary-background-color;
+	text-align: left;
+	position: fixed;
+	top: 72px;
+	left: 18px;
+	width: 200px;
+	border-radius: 0 $menu-border-radius $menu-border-radius $menu-border-radius;
+	opacity: 0;
+	transition: opacity 0.3s;
+
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 8px;
+
+		&:first-child {
+			border-top-right-radius: $menu-border-radius;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $menu-border-radius;
+			border-bottom-right-radius: $menu-border-radius;
+		}
+
+		&:hover {
+			background-color: $menu-hover-background-color;
+		}
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		span.menu-item-title {
+			flex: 1;
+			padding-left: 6px;
+		}
 	}
 }
