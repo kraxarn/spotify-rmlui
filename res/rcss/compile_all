@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for filename in [^_]*.scss; do
+  sass "${filename}" --style compressed --no-source-map "${filename%.scss}.rcss"
+done
