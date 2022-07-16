@@ -1,0 +1,55 @@
+<template name="toolbar">
+	<head>
+		<link type="text/rcss" href="/res/rcss/toolbar.rcss"/>
+	</head>
+	<body>
+	<div id="toolbar">
+		<svg id="main-menu" src="/res/icons/application-menu.svg"/>
+		<svg id="search" src="/res/icons/edit-find.svg"/>
+
+		<svg id="previous" src="/res/icons/media-skip-backward.svg"/>
+		<svg id="play-pause" src="/res/icons/media-playback-start.svg"/>
+		<svg id="next" src="/res/icons/media-skip-forward.svg"/>
+
+		<div class="spacer"></div>
+
+		<input id="progress" type="range" min="0" max="100" value="50" step="1"/>
+		<span id="position">0:00/0:00</span>
+
+		<div class="spacer"></div>
+
+		<svg id="shuffle" src="/res/icons/media-playlist-shuffle.svg"/>
+		<svg id="repeat" src="/res/icons/media-playlist-repeat.svg"/>
+
+		<svg id="minimize" src="/res/icons/window-minimize.svg"/>
+		<svg id="close" src="/res/icons/window-close.svg"/>
+	</div>
+
+	<ul id="main-menu-dropdown" class="menu">
+		<li>
+			<svg src="/res/icons/speaker.svg"/>
+			<span class="menu-item-title">Device</span>
+			<span class="submenu-indicator">></span>
+		</li>
+		<li>
+			<svg src="/res/icons/configure.svg"/>
+			<span class="menu-item-title">Settings...</span>
+			<span class="menu-item-shortcut">Ctrl-P</span>
+		</li>
+		<li>
+			<svg src="/res/icons/folder-txt.svg"/>
+			<span class="menu-item-title">Developer</span>
+			<span class="submenu-indicator">></span></li>
+		<li>
+			<svg src="/res/icons/im-user-away.svg"/>
+			<span class="menu-item-title">Log out...</span>
+			<span class="menu-item-shortcut">Ctrl-Shift-W</span>
+		</li>
+		<li>
+			<svg src="/res/icons/application-exit.svg"/>
+			<span class="menu-item-title">Quit</span>
+			<span class="menu-item-shortcut">Alt-F4</span>
+		</li>
+	</ul>
+	</body>
+</template>
