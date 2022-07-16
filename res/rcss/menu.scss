@@ -1,0 +1,42 @@
+@use "colors";
+
+$menu-border-radius: 6px;
+
+ul.menu {
+	background-color: colors.$secondary-background;
+	text-align: left;
+	position: fixed;
+	border-radius: $menu-border-radius;
+	transition: opacity 0.3s;
+
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 8px;
+
+		&:first-child {
+			border-top-left-radius: $menu-border-radius;
+			border-top-right-radius: $menu-border-radius;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $menu-border-radius;
+			border-bottom-right-radius: $menu-border-radius;
+		}
+
+		&:hover {
+			background-color: colors.$menu-hover-background;
+		}
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		span.menu-item-title {
+			flex: 1;
+			padding-left: 6px;
+		}
+	}
+}
