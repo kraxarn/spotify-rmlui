@@ -17,11 +17,11 @@
 
 		<span class="title">Playlists</span>
 		<ul class="list">
-			<li class="list-item">Playlist 1</li>
-			<li class="list-item">Playlist 2</li>
-			<li class="list-item">Playlist 3</li>
-			<li class="list-item">Playlist 4</li>
-			<li class="list-item">Playlist 5</li>
+			<li>Playlist 1</li>
+			<li>Playlist 2</li>
+			<li>Playlist 3</li>
+			<li>Playlist 4</li>
+			<li>Playlist 5</li>
 		</ul>
 
 		<div id="now-playing">
