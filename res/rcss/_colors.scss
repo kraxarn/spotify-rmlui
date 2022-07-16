@@ -1,0 +1,46 @@
+// Main background color
+$background: #121212;
+// Secondary background color for borders etc.
+$secondary-background: #282828;
+// Header background color for list titles etc.
+$header-background: #181818;
+// Background color for buttons or other selectable items
+$button-background: #333333;
+
+// Background for handle in scrollbars
+$scrollbar-handle: #4d4d4d;
+
+// Sidebar background color
+$sidebar-background: #000000;
+// Sidebar font color
+$sidebar-foreground: #b3b3b3;
+
+// Menu background color
+$menu-background: $secondary-background;
+// Menu hover
+$menu-hover-background: #3e3e3e;
+
+// Input background color for text inputs etc.
+$input-background: #3e3e3e;
+// Input foreground color
+$input-foreground: #ffffff;
+// Input border colors etc.
+$input-secondary-background: #b2b2b2;
+
+// Main font color
+$foreground: #f5f5f5;
+// Color of selected items etc.
+$highlight: $secondary-background;
+// Font color of selected items etc.
+$highlight-foreground: $foreground;
+// Main Spotify green color
+$theme: #1db954;
+// Color for disabled text etc.
+$disabled: #aba398;
+
+// Slider background (inactive)
+$slider-background: #535353;
+// Slider foreground (active)
+$slider-foreground: $sidebar-foreground;
+// Slider handle
+$slider-handle: #ffffff;

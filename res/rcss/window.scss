@@ -1,59 +1,13 @@
-// Main background color
-$background-color: #121212;
-// Secondary background color for borders etc.
-$secondary-background-color: #282828;
-// Header background color for list titles etc.
-$header-background-color: #181818;
-// Background color for buttons or other selectable items
-$button-background-color: #333333;
+@use "colors";
 
 $toolbar-spacer-width: 4px;
-
-// Background for handle in scrollbars
-$scrollbar-handle-color: #4d4d4d;
-
-// Sidebar background color
-$sidebar-background-color: #000000;
-// Sidebar font color
-$sidebar-foreground-color: #b3b3b3;
-
-// Menu background color
-$menu-background-color: $secondary-background-color;
-// Menu hover
-$menu-hover-background-color: #3e3e3e;
-
 $menu-border-radius: 6px;
-
-// Input background color for text inputs etc.
-$input-background-color: #3e3e3e;
-// Input foreground color
-$input-foreground-color: #ffffff;
-// Input border colors etc.
-$input-secondary-background-color: #b2b2b2;
-
-// Main font color
-$foreground-color: #f5f5f5;
-// Color of selected items etc.
-$highlight-color: $secondary-background-color;
-// Font color of selected items etc.
-$highlight-foreground-color: $foreground-color;
-// Main Spotify green color
-$theme-color: #1db954;
-// Color for disabled text etc.
-$disabled-color: #aba398;
-
-// Slider background (inactive)
-$slider-background-color: #535353;
-// Slider foreground (active)
-$slider-foreground-color: $sidebar-foreground-color;
-// Slider handle
-$slider-handle-color: #ffffff;
 
 body {
 	font-family: "Noto Sans";
 	font-size: 12px;
-	color: $foreground-color;
-	background: $background-color;
+	color: colors.$foreground;
+	background: colors.$background;
 	text-align: center;
 	padding: 2em 1em;
 	position: absolute;
@@ -74,8 +28,8 @@ p {
 }
 
 input.text {
-	background-color: $input-background-color;
-	color: $input-foreground-color;
+	background-color: colors.$input-background;
+	color: colors.$input-foreground;
 	padding: 4px;
 	border-radius: 4px;
 
@@ -85,12 +39,12 @@ input.text {
 	width: 200px;
 
 	&:disabled {
-		color: $disabled-color;
+		color: colors.$disabled;
 	}
 }
 
 ul.menu {
-	background-color: $secondary-background-color;
+	background-color: colors.$secondary-background;
 	text-align: left;
 	position: fixed;
 	border-radius: $menu-border-radius;
@@ -113,7 +67,7 @@ ul.menu {
 		}
 
 		&:hover {
-			background-color: $menu-hover-background-color;
+			background-color: colors.$menu-hover-background;
 		}
 
 		svg {
@@ -132,7 +86,7 @@ ul.menu {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: $secondary-background-color;
+	background-color: colors.$secondary-background;
 	width: 100%;
 	height: 42px;
 	padding: 0 6px;
@@ -145,11 +99,11 @@ ul.menu {
 		border-radius: 6px;
 
 		&:hover {
-			background-color: $menu-hover-background-color;
+			background-color: colors.$menu-hover-background;
 		}
 
 		&.enabled {
-			border-bottom: 1px $theme-color;
+			border-bottom: 1px colors.$theme;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 		}
@@ -172,7 +126,7 @@ ul.menu {
 		height: 5px;
 
 		slidertrack {
-			background-color: $slider-background-color;
+			background-color: colors.$slider-background;
 			border-radius: 4px;
 		}
 
@@ -181,7 +135,7 @@ ul.menu {
 			height: 16px;
 			margin-top: -6px;
 			border-radius: 8px;
-			background-color: $slider-handle-color;
+			background-color: colors.$slider-handle;
 		}
 	}
 
