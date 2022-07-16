@@ -1,7 +1,9 @@
 <rml>
 	<head>
 		<link type="text/rcss" href="/res/rcss/rml.rcss"/>
-		<link type="text/rcss" href="/res/rcss/window.rcss"/>
+		<link type="text/rcss" href="/res/rcss/globals.rcss"/>
+		<link type="text/rcss" href="/res/rcss/menu.rcss"/>
+		<link type="text/rcss" href="/res/rcss/toolbar.rcss"/>
 	</head>
 	<body>
 	<div id="container">
