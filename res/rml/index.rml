@@ -26,7 +26,7 @@
 			<svg id="minimize" src="/res/icons/window-minimize.svg"/>
 			<svg id="close" src="/res/icons/window-close.svg"/>
 		</div>
-		<ul id="main-menu-dropdown">
+		<ul id="main-menu-dropdown" class="menu">
 			<li>
 				<svg src="/res/icons/speaker.svg"/>
 				<span class="menu-item-title">Device</span>

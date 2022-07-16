@@ -89,6 +89,45 @@ input.text {
 	}
 }
 
+ul.menu {
+	background-color: $secondary-background-color;
+	text-align: left;
+	position: fixed;
+	border-radius: $menu-border-radius;
+	transition: opacity 0.3s;
+
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 8px;
+
+		&:first-child {
+			border-top-left-radius: $menu-border-radius;
+			border-top-right-radius: $menu-border-radius;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $menu-border-radius;
+			border-bottom-right-radius: $menu-border-radius;
+		}
+
+		&:hover {
+			background-color: $menu-hover-background-color;
+		}
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		span.menu-item-title {
+			flex: 1;
+			padding-left: 6px;
+		}
+	}
+}
+
 #toolbar {
 	display: flex;
 	flex-direction: row;
@@ -157,42 +196,12 @@ input.text {
 }
 
 #main-menu-dropdown {
-	background-color: $secondary-background-color;
-	text-align: left;
-	position: fixed;
 	top: 72px;
 	left: 18px;
 	width: 200px;
-	border-radius: 0 $menu-border-radius $menu-border-radius $menu-border-radius;
-	transition: opacity 0.3s;
+	border-top-left-radius: 0;
 
-	li {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		padding: 8px;
-
-		&:first-child {
-			border-top-right-radius: $menu-border-radius;
-		}
-
-		&:last-child {
-			border-bottom-left-radius: $menu-border-radius;
-			border-bottom-right-radius: $menu-border-radius;
-		}
-
-		&:hover {
-			background-color: $menu-hover-background-color;
-		}
-
-		svg {
-			width: 18px;
-			height: 18px;
-		}
-
-		span.menu-item-title {
-			flex: 1;
-			padding-left: 6px;
-		}
+	li:first-child {
+		border-top-left-radius: 0;
 	}
 }
