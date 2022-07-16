@@ -1,0 +1,44 @@
+<template name="left-sidepanel">
+	<head>
+		<link type="text/rcss" href="/res/rcss/left-sidepanel.rcss"/>
+	</head>
+	<body>
+	<div id="left-sidepanel">
+		<span class="title">Library</span>
+		<ul class="list">
+			<li>History</li>
+			<li>Liked Tracks</li>
+			<li>Top Tracks</li>
+			<li>New Releases</li>
+			<li class="expandable">Liked Albums</li>
+			<li class="expandable">Top Artists</li>
+			<li class="expandable">Followed Artists</li>
+		</ul>
+
+		<span class="title">Playlists</span>
+		<ul class="list">
+			<li class="list-item">Playlist 1</li>
+			<li class="list-item">Playlist 2</li>
+			<li class="list-item">Playlist 3</li>
+			<li class="list-item">Playlist 4</li>
+			<li class="list-item">Playlist 5</li>
+		</ul>
+
+		<div id="now-playing">
+			<div id="play-context">
+				<svg src="/res/icons/view-media-album-cover.svg"/>
+				<span>Album 1</span>
+			</div>
+			<div id="currently-playing">
+				<svg src="/res/icons/media-optical-audio.svg"/>
+				<div>
+					<div id="currently-playing-name">
+						<span class="track-name">Track 1</span>
+						<span class="artist-name">Artist 1</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</template>
