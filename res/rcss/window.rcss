@@ -83,7 +83,6 @@ input.text {
   left: 18px;
   width: 200px;
   border-radius: 0 6px 6px 6px;
-  opacity: 0;
   transition: opacity 0.3s; }
   #main-menu-dropdown li {
     display: flex;
